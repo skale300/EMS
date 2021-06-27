@@ -8,5 +8,4 @@ import com.swapapp.microservices.swappp.entity.User;
 @Repository
 public interface UserRepository extends JpaRepository<User, Integer> {
 
-
 }

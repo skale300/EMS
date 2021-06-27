@@ -3,6 +3,7 @@ package com.swapapp.microservices.swappp.controller;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Pageable;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.DeleteMapping;
@@ -24,36 +25,40 @@ public class UserController {
 
 	@GetMapping("/users")
 	public ResponseEntity<List<UserDto>> getUsers() {
+		// if table is empty ?
 		return ResponseEntity.ok(userService.getUsers());
 	}
 
 	@GetMapping("/users/{id}")
-	public UserDto getUsers(@PathVariable Integer id) {
-		return userService.getUser(id);
+	public ResponseEntity<UserDto> getUsers(@PathVariable Integer id) {
+		// All ok
+		return new ResponseEntity<>(userService.getUser(id), HttpStatus.OK);
+	}
+
+	@PostMapping("/users")
+	public ResponseEntity<UserDto> addUser(@RequestBody UserDto user) {
+		return new ResponseEntity(userService.addUser(user), HttpStatus.CREATED);
 	}
 
 	@PutMapping("/users/{id}")
-	public ResponseEntity<UserDto> updateUser(@PathVariable Integer id) {
-		return new ResponseEntity<>(userService.updateUser(id), HttpStatus.OK);
+	public ResponseEntity<UserDto> updateUser(@RequestBody UserDto userDTO, @PathVariable Integer id) {
+		return new ResponseEntity<>(userService.updateUser(id, userDTO), HttpStatus.OK);
 	}
 
 	@DeleteMapping("/users/{id}")
 	public ResponseEntity deleteUser(@PathVariable Integer id) {
-		try {
-			userService.deleteUser(id);
-			return new ResponseEntity(HttpStatus.NO_CONTENT);
-		} catch (Exception e) {
-			return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
-		}
+		userService.deleteUser(id);
+		return new ResponseEntity<>(HttpStatus.OK);
+	}
+	
+	@GetMapping("/userspage")
+	public ResponseEntity<List<UserDto>> getUserDetails(Pageable pageable) {
+		
+		
+//		http://localhost:8080/userspage?page=0&size=2&sort=firstName 
+		
+		List<UserDto> usersPage = userService.getUsersPage(pageable);
+		return new ResponseEntity<List<UserDto>>(usersPage, HttpStatus.OK);
 	}
 
-	@PostMapping("/users")
-	public ResponseEntity addUser(@RequestBody UserDto user) {
-		try {
-			userService.addUser(user);
-			return new ResponseEntity<>(HttpStatus.CREATED);
-		} catch (Exception e) {
-			return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
-		}
-	}
 }
