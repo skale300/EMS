@@ -29,6 +29,8 @@ public class UserController {
 		return ResponseEntity.ok(userService.getUsers());
 	}
 
+//	Junit test cases 
+	
 	@GetMapping("/users/{id}")
 	public ResponseEntity<UserDto> getUsers(@PathVariable Integer id) {
 		// All ok
