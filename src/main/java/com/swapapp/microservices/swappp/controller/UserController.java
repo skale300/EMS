@@ -29,7 +29,7 @@ public class UserController {
 		return ResponseEntity.ok(userService.getUsers());
 	}
 
-//	Junit test cases 
+//	Junit test cases comment
 	
 	@GetMapping("/users/{id}")
 	public ResponseEntity<UserDto> getUsers(@PathVariable Integer id) {
@@ -57,7 +57,8 @@ public class UserController {
 	public ResponseEntity<List<UserDto>> getUserDetails(Pageable pageable) {
 		
 		
-//		http://localhost:8080/userspage?page=0&size=2&sort=firstName 
+//		http://localhost:8080/userspage?page=0&size=2&sort=firstName
+//		pagination sample request mentioned
 		
 		List<UserDto> usersPage = userService.getUsersPage(pageable);
 		return new ResponseEntity<List<UserDto>>(usersPage, HttpStatus.OK);

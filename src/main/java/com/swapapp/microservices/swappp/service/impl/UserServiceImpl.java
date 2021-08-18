@@ -29,8 +29,9 @@ public class UserServiceImpl implements UserService {
 	@Autowired
 	private ModelMapper modelMapper;
 	
-	public int add(Integer a, Integer b) {
-		return a + b;
+	@Override
+	public Integer add(int i, int j) {
+		return i + j;
 	}
 
 	@Override
@@ -68,7 +69,7 @@ public class UserServiceImpl implements UserService {
 			throw new UserNotFoundException();
 		}
 	}
-	// delete user
+
 	@Override
 	public void deleteUser(Integer id) {
 		userRepository.deleteById(id);

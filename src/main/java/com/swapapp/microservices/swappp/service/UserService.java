@@ -21,4 +21,6 @@ public interface UserService {
 
 	List<UserDto> getUsersPage(Pageable pageable);
 
+	Integer add(int i, int j);
+
 }
