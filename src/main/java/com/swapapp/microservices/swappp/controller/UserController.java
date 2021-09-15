@@ -58,7 +58,7 @@ public class UserController {
 		
 		
 //		http://localhost:8080/userspage?page=0&size=2&sort=firstName
-//		pagination sample request mentioned
+//		http://localhost:8080/userspage?page=1&size=3
 		
 		List<UserDto> usersPage = userService.getUsersPage(pageable);
 		return new ResponseEntity<List<UserDto>>(usersPage, HttpStatus.OK);
