@@ -1,4 +1,4 @@
-package com.swapapp.microservices.swappp.exception;
+package com.swapapp.microservices.ems.exception;
 
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;

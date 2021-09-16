@@ -1,4 +1,4 @@
-package com.swapapp.microservices.swappp.exception;
+package com.swapapp.microservices.ems.exception;
 
 public class UserNotFoundException extends RuntimeException {
 

@@ -1,4 +1,4 @@
-package com.swapapp.microservices.swappp.entity;
+package com.swapapp.microservices.ems.entity;
 
 import javax.persistence.Column;
 import javax.persistence.Entity;

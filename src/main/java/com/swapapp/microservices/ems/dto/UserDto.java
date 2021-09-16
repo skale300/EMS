@@ -1,4 +1,4 @@
-package com.swapapp.microservices.swappp.dto;
+package com.swapapp.microservices.ems.dto;
 
 public class UserDto {
 	

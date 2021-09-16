@@ -12,8 +12,8 @@ import org.mockito.Mock;
 import org.mockito.MockitoAnnotations;
 import org.springframework.boot.test.context.SpringBootTest;
 
-import com.swapapp.microservices.swappp.dto.UserDto;
-import com.swapapp.microservices.swappp.service.UserService;
+import com.swapapp.microservices.ems.dto.UserDto;
+import com.swapapp.microservices.ems.service.UserService;
 
 @SpringBootTest
 public class UserServiceImplTest {

@@ -1,4 +1,4 @@
-package com.swapapp.microservices.swappp.configuration;
+package com.swapapp.microservices.ems.configuration;
 
 import org.modelmapper.ModelMapper;
 import org.springframework.context.annotation.Bean;

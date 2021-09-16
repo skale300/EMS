@@ -1,11 +1,11 @@
-package com.swapapp.microservices.swappp.service;
+package com.swapapp.microservices.ems.service;
 
 import java.util.List;
 
 import org.springframework.data.domain.Pageable;
 
-import com.swapapp.microservices.swappp.dto.UserDto;
-import com.swapapp.microservices.swappp.entity.User;
+import com.swapapp.microservices.ems.dto.UserDto;
+import com.swapapp.microservices.ems.entity.User;
 
 public interface UserService {
 

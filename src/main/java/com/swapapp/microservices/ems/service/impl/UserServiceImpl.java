@@ -1,4 +1,4 @@
-package com.swapapp.microservices.swappp.service.impl;
+package com.swapapp.microservices.ems.service.impl;
 
 import java.util.List;
 import java.util.Optional;
@@ -12,11 +12,11 @@ import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
-import com.swapapp.microservices.swappp.dto.UserDto;
-import com.swapapp.microservices.swappp.entity.User;
-import com.swapapp.microservices.swappp.exception.UserNotFoundException;
-import com.swapapp.microservices.swappp.repository.UserRepository;
-import com.swapapp.microservices.swappp.service.UserService;
+import com.swapapp.microservices.ems.dto.UserDto;
+import com.swapapp.microservices.ems.entity.User;
+import com.swapapp.microservices.ems.exception.UserNotFoundException;
+import com.swapapp.microservices.ems.repository.UserRepository;
+import com.swapapp.microservices.ems.service.UserService;
 
 @Service
 public class UserServiceImpl implements UserService {

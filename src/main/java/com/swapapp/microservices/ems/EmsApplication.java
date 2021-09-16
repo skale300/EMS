@@ -1,13 +1,13 @@
-package com.swapapp.microservices.swappp;
+package com.swapapp.microservices.ems;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class SwapAppApplication {
+public class EmsApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(SwapAppApplication.class, args);
+		SpringApplication.run(EmsApplication.class, args);
 	}
 
 }

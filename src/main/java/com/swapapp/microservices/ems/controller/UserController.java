@@ -1,4 +1,4 @@
-package com.swapapp.microservices.swappp.controller;
+package com.swapapp.microservices.ems.controller;
 
 import java.util.List;
 
@@ -14,8 +14,8 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.swapapp.microservices.swappp.dto.UserDto;
-import com.swapapp.microservices.swappp.service.UserService;
+import com.swapapp.microservices.ems.dto.UserDto;
+import com.swapapp.microservices.ems.service.UserService;
 
 @RestController
 public class UserController {
